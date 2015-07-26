@@ -250,22 +250,8 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>爆〇了！！！不爽啊……</p>
-<h2 id="1001_Souvenir">1001 <a href="http://bestcoder.hdu.edu.cn/contests/contest_chineseproblem.php?cid=610&amp;pid=1001" target="_blank" rel="external">Souvenir</a></h2><p>问题描述<br>今天是BestCoder一周年纪念日. 比赛管理员Soda想要给每个参赛者准备一个纪念品. 商店里纪念品的单价是p元, 同时也可以花q元购买纪念品套装, 一个套装里有m个纪念品.</p>
-<p>今天总共有n个参赛者, Soda想要知道最少需要花多少钱才可以给每个人都准备一个纪念品.<br>输入描述<br>输入有多组数据. 第一行有一个整数T (1≤T≤105), 表示测试数据组数. 然后对于每组数据:</p>
-<p>一行包含4个整数 n,m,p,q (1≤n,m,p,q≤104).<br>输出描述<br>对于每组数据输出最小花费.<br>输入样例<br>2<br>1 2 2 1<br>1 2 3 4<br>输出样例<br>1<br>3<br>Hint<br>对于第一组数据, Soda可以1元购买一个套装. 对于第二组数据, Soda可以直接花3元购买一个纪念品.</p>
-<h3 id="题解">题解</h3><p>大水题啊，看看套装会不会单卖比较便宜，还有就是买完套装之后零头是用单件填还是拿一个套装填的问题。<br>我靠，bug的地方竟然是不能用cin cout 读写，1e5的数据你和我说不能cin！</p>
-<h2 id="<!-￼0->"><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#<span class="keyword">include</span>&lt;cstdio&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int t;</span><br><span class="line">    cin&gt;&gt;t;</span><br><span class="line">    <span class="keyword">while</span>(t--)</span><br><span class="line">    &#123;</span><br><span class="line">        int <span class="keyword">n</span>,<span class="keyword">m</span>,p,q;</span><br><span class="line">        scanf(<span class="string">"%d%d%d%d"</span>,&amp;<span class="keyword">n</span>,&amp;<span class="keyword">m</span>,&amp;p,&amp;q);</span><br><span class="line">        int ans;</span><br><span class="line">        <span class="keyword">if</span> (p*<span class="keyword">m</span>&lt;q) ans=<span class="keyword">n</span>*p;</span><br><span class="line">        <span class="keyword">else</span> ans=<span class="literal">min</span>(<span class="keyword">n</span>/<span class="keyword">m</span>*q+<span class="keyword">n</span>%<span class="keyword">m</span>*p,(<span class="keyword">n</span>+<span class="keyword">m</span>-1)/<span class="keyword">m</span>*q);</span><br><span class="line">        printf(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2><h2 id="1002_Hidden_String">1002 <a href="http://acm.hdu.edu.cn/showproblem.php?pid=5311" target="_blank" rel="external">Hidden String</a></h2><p>问题描述<br>今天是BestCoder一周年纪念日. 比赛管理员Soda有一个长度为n的字符串s. 他想要知道能否找到s的三个互不相交的子串s[l1..r1], s[l2..r2], s[l3..r3]满足下列条件:</p>
-<ol>
-<li><p>1≤l1≤r1&lt;l2≤r2&lt;l3≤r3≤n</p>
-</li>
-<li><p>s[l1..r1], s[l2..r2], s[l3..r3]依次连接之后得到字符串”anniversary”.<br>输入描述<br>输入有多组数据. 第一行有一个整数T (1≤T≤100), 表示测试数据组数. 然后对于每组数据:</p>
-</li>
-</ol>
-<p>一行包含一个仅含小写字母的字符串s (1≤|s|≤100).<br>输出描述<br>对于每组数据, 如果Soda可以找到这样三个子串, 输出”YES”, 否则输出”NO”.<br>输入样例<br>2<br>annivddfdersewwefary<br>nniversarya<br>输出样例<br>YES<br>NO</p>
-<h3 id="题解-1">题解</h3><p>暴力搜就好，先把anniversary分成小块，然后在s里枚举找，思路是对的，然而用string的substr和find并不如c里的strcmp与strstr 姿势优美<br>T_T……<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstdio&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstring&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">char</span> s[<span class="number">105</span>];</span><br><span class="line"><span class="keyword">char</span> str[]=<span class="string">"anniversary"</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">    <span class="keyword">while</span>(t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%s"</span>,s);</span><br><span class="line">        <span class="keyword">int</span> flag=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=<span class="number">8</span>; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=i+<span class="number">1</span>; j&lt;=<span class="number">9</span>; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">char</span> s1[<span class="number">10</span>],s2[<span class="number">10</span>],s3[<span class="number">10</span>];</span><br><span class="line">                <span class="built_in">strncpy</span>(s1,str,i+<span class="number">1</span>);</span><br><span class="line">                s1[i+<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">                <span class="built_in">strncpy</span>(s2,str+i+<span class="number">1</span>,j-i);</span><br><span class="line">                s2[j-i]=<span class="number">0</span>;</span><br><span class="line">                <span class="built_in">strcpy</span>(s3,str+j+<span class="number">1</span>);</span><br><span class="line">                <span class="keyword">char</span> *a1=<span class="built_in">strstr</span>(s,s1);</span><br><span class="line">                <span class="keyword">if</span> (a1)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">char</span> *a2=<span class="built_in">strstr</span>(a1+i+<span class="number">1</span>,s2);</span><br><span class="line">                    <span class="keyword">if</span> (a2&amp;&amp;<span class="built_in">strstr</span>(a2+j-i,s3))</span><br><span class="line">                    &#123;</span><br><span class="line">                        flag=<span class="number">1</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag) <span class="built_in">puts</span>(<span class="string">"YES"</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">"NO"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="<!-￼2->"><blockquote><p>char *strncpy(char *dest, char *src, int n)<br>把src所指字符串的前n个字节复制到dest所指的数组中，并返回dest;</p>
-<p>char* strstr(str1,str2)<br>str1: 被查找目标<br>str2: 要查找对象<br>若str2是str1的子串，则先确定str2在str1的第一次出现的位置，并返回此str1在str2首位置的地址。；如果str2不是str1的子串，则返回NULL;</p>
-</blockquote></h2>
+<h2 id="1001_Souvenir">1001 <a href="http://bestcoder.hdu.edu.cn/contests/contest_chineseproblem.php?cid=610&amp;pid=1001">Souvenir</a></h2><p>问题描述<br>今天是BestCoder一周年纪念日. 比赛管理员Soda想要给每个参赛者准备一个纪念品. 商店里纪念品的单价是p元, 同时也可以花q元购买纪念品套装, 一个套装里有m个纪念品.</p>
+<p>今天总共有n个参赛者, Soda想要知道最少需要花多少钱才可以给每个人都准备一个纪念品.<br>输入描述<br>输入有多组数据. 第一行有一个整数T (1≤T≤105), 表示测试数据组数. 然后对于每组数据:<br>
       
     </div>
     
@@ -282,6 +268,10 @@ var _hmt = _hmt || [];
 	</div>
 
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/07/26/BestCoder-1st-Anniversary/#more">阅读更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -548,196 +538,10 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Codeforces-Round-313" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2015/07/23/Codeforces-Round-313/" class="article-date">
-  	<time datetime="2015-07-23T15:43:17.000Z" itemprop="datePublished">2015-07-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/23/Codeforces-Round-313/">Codeforces Round 313</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="A-_Currency_System_in_Geraldion"><em><a href="http://codeforces.com/contest/560/problem/A">A. Currency System in Geraldion</a></em></h2><p>A magic island Geraldion, where Gerald lives, has its own currency system. It uses banknotes of several values. But the problem is, the system is not perfect and sometimes it happens that Geraldionians cannot express a certain sum of money with any set of banknotes. Of course, they can use any number of banknotes of each value. Such sum is called unfortunate. Gerald wondered: what is the minimum unfortunate sum?<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Codeforces/">Codeforces</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Codeforces/">Codeforces</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/07/23/Codeforces-Round-313/#more">阅读更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-2015-Multi-University-Training-Contest-1-1002" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/23/2015-Multi-University-Training-Contest-1-1002/" class="article-date">
-  	<time datetime="2015-07-23T15:17:46.000Z" itemprop="datePublished">2015-07-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/23/2015-Multi-University-Training-Contest-1-1002/">2015-Multi-University-Training-Contest-1 1002</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1002">1002</h2><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5289">Assignment</a></p>
-<p>Problem Description<br>Tom owns a company and he is the boss. There are n staffs which are numbered from 1 to n in this company, and every staff has a ability. Now, Tom is going to assign a special task to some staffs who were in the same group. In a group, the difference of the ability of any two staff is less than k, and their numbers are continuous. Tom want to know the number of groups like this.</p>
-<p>Input<br>In the first line a number T indicates the number of test cases. Then for each case the first line contain 2 numbers n, k (1&lt;=n&lt;=100000, 0&lt;k&lt;=10^9),indicate the company has n persons, k means the maximum difference between abilities of staff in a group is less than k. The second line contains n integers:a[1],a[2],…,a<a href="0&lt;=a[i]&lt;=10^9">n</a>,indicate the i-th staff’s ability.</p>
-<p>Output<br>For each test，output the number of groups.</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/多校/">多校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/题解/">题解</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/多校/">多校</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/07/23/2015-Multi-University-Training-Contest-1-1002/#more">阅读更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-2015-Multi-University-Training-Contest-1 1001" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/23/2015-Multi-University-Training-Contest-1 1001/" class="article-date">
-  	<time datetime="2015-07-23T13:24:05.000Z" itemprop="datePublished">2015-07-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/23/2015-Multi-University-Training-Contest-1 1001/">2015 Multi-University Training Contest 1 1001</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1001">1001</h2><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5288">OO’s Sequence</a></p>
-<p>Problem Description<br>   OO has got a array A of size n ,defined a function f(l,r) represent the number of i (l&lt;=i&lt;=r) , that there’s no j(l&lt;=j&lt;=r,j&lt;&gt;i) satisfy ai mod aj=0,now OO want to know<br>∑i=1n∑j=inf(i,j) mod （109+7）.<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/多校/">多校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/题解/">题解</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/多校/">多校</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/07/23/2015-Multi-University-Training-Contest-1 1001/#more">阅读更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
