@@ -2334,3 +2334,22 @@ form input.st-search-input_my {
   outline: none;
   background: #fcfcfc url("/img/search.png") no-repeat 7px 7px;
 }
+.search {
+  margin-bottom: 30px;
+}
+.search input {
+  background: #fafafa;
+  font-family: font-title;
+  font-style: italic;
+  font-size: 1em;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: color-meta;
+}
+.search input:focus {
+  color: color-font;
+}
