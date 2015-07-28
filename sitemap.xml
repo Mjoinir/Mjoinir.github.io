@@ -2,11 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://guoyuxiang.com/submmit/index.html</loc>
-    <lastmod>2015-07-28T10:34:00.199Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://guoyuxiang.com/404.html</loc>
     <lastmod>2015-07-27T13:23:16.770Z</lastmod>
   </url>
@@ -59,6 +54,41 @@
   <url>
     <loc>http://guoyuxiang.com/2015/07/23/2015-Multi-University-Training-Contest-1-1002/</loc>
     <lastmod>2015-07-23T15:26:42.983Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://guoyuxiang.com/submmit/index.html</loc>
+    <lastmod>2014-10-16T07:18:45.669Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://guoyuxiang.com/submmit/css/demo.css</loc>
+    <lastmod>2014-10-15T15:06:04.102Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://guoyuxiang.com/submmit/css/component.css</loc>
+    <lastmod>2014-05-22T07:53:58.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://guoyuxiang.com/submmit/js/stepsForm.js</loc>
+    <lastmod>2014-03-31T22:59:22.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://guoyuxiang.com/submmit/js/modernizr.custom.js</loc>
+    <lastmod>2014-03-31T01:31:18.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://guoyuxiang.com/submmit/css/normalize.css</loc>
+    <lastmod>2013-07-08T14:10:00.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://guoyuxiang.com/submmit/js/classie.js</loc>
+    <lastmod>2013-05-02T22:02:24.000Z</lastmod>
   </url>
   
 </urlset>
