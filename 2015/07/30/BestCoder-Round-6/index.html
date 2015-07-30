@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>BestCoder Round #6 | Mjolnir</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Goffi and MedianProblem DescriptionA median in a sequence with the length of n is an element which occupies position number ⌊n+12⌋ after we sort the elements in the non-decreasing order (the elements">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BestCoder Round #6">
+<meta property="og:url" content="http://guoyuxiang.com/2015/07/30/BestCoder-Round-6/index.html">
+<meta property="og:site_name" content="Mjolnir">
+<meta property="og:description" content="Goffi and MedianProblem DescriptionA median in a sequence with the length of n is an element which occupies position number ⌊n+12⌋ after we sort the elements in the non-decreasing order (the elements">
+<meta property="og:updated_time" content="2015-07-30T14:07:24.485Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BestCoder Round #6">
+<meta name="twitter:description" content="Goffi and MedianProblem DescriptionA median in a sequence with the length of n is an element which occupies position number ⌊n+12⌋ after we sort the elements in the non-decreasing order (the elements">
+  
+    <link rel="alternative" href="/atom.xml" title="Mjolnir" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkl3j.com1.z0.glb.clouddn.com/favicon-20150727113535562.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?99aed96d60fcd4cdd709e9a79e140255";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?99aed96d60fcd4cdd709e9a79e140255";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+<form class="search" method="get" accept-charset="utf-8">
+<label>Search</label>
+			<input type="text" id="chillax-search-input" class="st-search-input_my" maxlength="30" placeholder="我是翔仔花了一天捣鼓出来的搜索框" />
+		</form>
+	<header id="header" class="inner">
+	
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkl3j.com1.z0.glb.clouddn.com/c837b944c7dc012aa39b21e5fdc9d547%20(1).jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Mjolnir</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">even if you get killed,just walk it off!</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/题解">题解</a></li>
+				        
+							<li><a href="/categories/日志">日志</a></li>
+				        
+							<li><a href="/about">更新记录</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="rss" target="_blank" href="http://blog.csdn.net/mjoinir" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/guo-yi-60" title="zhihu">zhihu</a>
+					        
+								<a class="douban" target="_blank" href="http://qianmo.com/lovewy/" title="douban">douban</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/imgyx" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Codeforces/" style="font-size: 10px;">Codeforces</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/bestcoder/" style="font-size: 13.33px;">bestcoder</a> <a href="/tags/codeforces/" style="font-size: 10px;">codeforces</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/swiftype/" style="font-size: 10px;">swiftype</a> <a href="/tags/多校/" style="font-size: 16.67px;">多校</a> <a href="/tags/好声音/" style="font-size: 10px;">好声音</a> <a href="/tags/模板/" style="font-size: 10px;">模板</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/难题/" style="font-size: 10px;">难题</a> <a href="/tags/题解/" style="font-size: 20px;">题解</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://xuanwo.org/">xuanwo</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://ooooooooe.com/">大帝</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://fanzheng.org/">fz</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.altair21.com/">altair21</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://qianmo.com/lovewy/">我的阡陌</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://beidi.cugbteam.org/">北地资源</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.acfun.tv/">Acfun</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://weibo.com/u/5073535420?from=feed&loc=nickname">vy</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://litten.github.io/">litten</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://oeis.org">oeis</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://agar.io">Agar</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">本萌妹儿最近在奋斗中</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Mjolnir</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkl3j.com1.z0.glb.clouddn.com/c837b944c7dc012aa39b21e5fdc9d547%20(1).jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Mjolnir</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">even if you get killed,just walk it off!</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/题解">题解</a></li>
+		        
+					<li><a href="/categories/日志">日志</a></li>
+		        
+					<li><a href="/about">更新记录</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="rss" target="_blank" href="http://blog.csdn.net/mjoinir" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/guo-yi-60" title="zhihu">zhihu</a>
+			        
+						<a class="douban" target="_blank" href="http://qianmo.com/lovewy/" title="douban">douban</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/imgyx" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-BestCoder-Round-6" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/30/BestCoder-Round-6/" class="article-date">
+  	<time datetime="2015-07-30T13:53:40.000Z" itemprop="datePublished">2015-07-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      BestCoder Round #6
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bestcoder/">bestcoder</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/题解/">题解</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/bestcoder/">bestcoder</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Goffi_and_Median"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4981" target="_blank" rel="external">Goffi and Median</a></h2><p>Problem Description<br>A median in a sequence with the length of n is an element which occupies position number ⌊n+12⌋ after we sort the elements in the non-decreasing order (the elements are numbered starting with 1). A median of an array (2, 6, 1, 2, 3) is the number 2, and a median of array (0, 96, 17, 23) — the number 17.</p>
+<p>An average of a sequence is the sum of sequence divided the size of the sequence.<br><a id="more"></a><br>Goffi likes median very much and he hates average number. So if a sequence’s average number is larger than or equal to the median of sequence, Goffi will hate the sequence. Otherwise, Goffi will like it.</p>
+<p>Now, your are given a sequence. Please find whether Goffi will like it or hate it.</p>
+<p>Input<br>Input contains multiple test cases (less than 100). For each test case, the first line contains an integer n (1≤n≤1000), indicating the size of the sequence. Then in the next line, there are n integers a1,a2,…,an (1≤ai≤1000), seperated by one space.</p>
+<p>Output<br>For each case, if Goffi like the sequence, output “YES” in a line. Otherwise, output “NO”.</p>
+<p>Sample Input<br>5<br>1 2 3 4 5<br>4<br>1 5 6 6</p>
+<p>Sample Output<br>NO<br>YES</p>
+<h3 id="题解">题解</h3><p>水题，求中位数与平均数谁大谁小</p>
+<h2 id="<!-￼0->"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;algorithm&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">   <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)</span><br><span class="line">   &#123;   <span class="keyword">int</span> a[n];</span><br><span class="line">       <span class="keyword">double</span> ave,sum=<span class="number">0.0</span>;</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">       &#123;</span><br><span class="line">           <span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">           sum+=a[i];</span><br><span class="line">       &#125;</span><br><span class="line">       sort(a+<span class="number">1</span>,a+<span class="number">1</span>+n);</span><br><span class="line">       <span class="keyword">if</span>(a[(n+<span class="number">1</span>)/<span class="number">2</span>]&lt;=sum/n)   <span class="built_in">cout</span>&lt;&lt;<span class="string">"NO"</span>&lt;&lt;endl;</span><br><span class="line">       <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;<span class="string">"YES"</span>&lt;&lt;endl;</span><br><span class="line">   &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2><h2 id="Goffi_and_Squary_Partition"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4982" target="_blank" rel="external">Goffi and Squary Partition</a></h2><p>Problem Description<br>Recently, Goffi is interested in squary partition of integers.</p>
+<p>A set X of k distinct positive integers is called squary partition of n if and only if it satisfies the following conditions:<br>[ol]<br>the sum of k positive integers is equal to n<br>one of the subsets of X containing k−1 numbers sums up to a square of integer.<br>[/ol]<br>For example, a set {1, 5, 6, 10} is a squary partition of 22 because 1 + 5 + 6 + 10 = 22 and 1 + 5 + 10 = 16 = 4 × 4.</p>
+<p>Goffi wants to know, for some integers n and k, whether there exists a squary partition of n to k distinct positive integers.</p>
+<p>Input<br>Input contains multiple test cases (less than 10000). For each test case, there’s one line containing two integers n and k (2≤n≤200000,2≤k≤30).</p>
+<p>Output<br>For each case, if there exists a squary partition of n to k distinct positive integers, output “YES” in a line. Otherwise, output “NO”.</p>
+<p>Sample Input<br>2 2<br>4 2<br>22 4</p>
+<p>Sample Output<br>NO<br>YES<br>YES</p>
+<h3 id="题解-1">题解</h3><p>考察一个数是否可以用k个数表示，k-1个数和是完全平方数，我们把数列分为三个部分，1~k-2 平方数-前面的和 总数-平方数-前面的和</p>
+<ul>
+<li>如果2在1中，gg</li>
+<li>如果3在1中，考虑2可不可以提供使得3逃离1的量</li>
+<li>如果2==3，3不能变，只有使2变小，那就要考察2与1中最大的数的差值</li>
+<li>其余都可以构造<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;algorithm&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;string&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;vector&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cmath&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> k,<span class="keyword">int</span> chu)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ss=x-k*(k-<span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span>(ss&lt;=k-<span class="number">1</span>)  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(chu&lt;=k-<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(ss-k-<span class="number">1</span>&lt;k-chu)   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(chu==ss)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(ss-(k-<span class="number">1</span>)&lt;<span class="number">3</span>)  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,x,k;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;k)</span><br><span class="line">   &#123;</span><br><span class="line">       <span class="keyword">int</span> flag=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">int</span> i=<span class="built_in">sqrt</span>(n);</span><br><span class="line">       <span class="keyword">if</span>(i*i==n)   i--;</span><br><span class="line">      <span class="comment">// if(n==2&amp;&amp;k==2)   cout&lt;&lt;"NO"&lt;&lt;endl;</span></span><br><span class="line">       <span class="comment">//else</span></span><br><span class="line">        &#123;<span class="keyword">if</span>(find(i*i,k-<span class="number">1</span>,n-i*i))    <span class="built_in">cout</span>&lt;&lt;<span class="string">"YES"</span>&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">       <span class="built_in">cout</span>&lt;&lt;<span class="string">"NO"</span>&lt;&lt;endl;&#125;</span><br><span class="line">   &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/07/30/2015-Multi-University-Training-Contest-4-1009/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2015 Multi-University Training Contest 4 1009</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="BestCoder-Round-6" data-title="BestCoder Round #6" data-url="http://guoyuxiang.com/2015/07/30/BestCoder-Round-6/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"mjolnir"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Mjolnir
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+	<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','bgPZswnFC5YQTKMKbSFN','2.0.0');
+</script>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-65578540-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div id="totop" style="position:fixed;bottom:45px;right:15px;cursor: pointer;">
+<a title="to-the-top"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+  </div>
+</body>
+</html>
