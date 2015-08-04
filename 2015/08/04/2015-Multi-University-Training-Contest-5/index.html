@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title> 2015 Multi-University Training Contest 5 | Mjolnir</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="老规矩，先上水题
+1002    MZL’s xorProblem DescriptionMZL loves xor very much.Now he gets an array A.The length of A is n.He wants to know the xor of all (Ai+Aj)(1≤i,j≤n)The xor of an array B is defined as B1">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" 2015 Multi-University Training Contest 5">
+<meta property="og:url" content="http://guoyuxiang.com/2015/08/04/2015-Multi-University-Training-Contest-5/index.html">
+<meta property="og:site_name" content="Mjolnir">
+<meta property="og:description" content="老规矩，先上水题
+1002    MZL’s xorProblem DescriptionMZL loves xor very much.Now he gets an array A.The length of A is n.He wants to know the xor of all (Ai+Aj)(1≤i,j≤n)The xor of an array B is defined as B1">
+<meta property="og:updated_time" content="2015-08-04T13:50:45.351Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=" 2015 Multi-University Training Contest 5">
+<meta name="twitter:description" content="老规矩，先上水题
+1002    MZL’s xorProblem DescriptionMZL loves xor very much.Now he gets an array A.The length of A is n.He wants to know the xor of all (Ai+Aj)(1≤i,j≤n)The xor of an array B is defined as B1">
+  
+    <link rel="alternative" href="/atom.xml" title="Mjolnir" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkl3j.com1.z0.glb.clouddn.com/favicon-20150727113535562.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?99aed96d60fcd4cdd709e9a79e140255";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?99aed96d60fcd4cdd709e9a79e140255";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+<form class="search" method="get" accept-charset="utf-8">
+<label>Search</label>
+			<input type="text" id="chillax-search-input" class="st-search-input_my" maxlength="30" placeholder="我是翔仔花了一天捣鼓出来的搜索框" />
+		</form>
+	<header id="header" class="inner">
+	
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkl3j.com1.z0.glb.clouddn.com/c837b944c7dc012aa39b21e5fdc9d547%20(1).jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Mjolnir</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">even if you get killed,just walk it off!</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/题解">题解</a></li>
+				        
+							<li><a href="/categories/日志">日志</a></li>
+				        
+							<li><a href="/about">更新记录</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="rss" target="_blank" href="http://blog.csdn.net/mjoinir" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/guo-yi-60" title="zhihu">zhihu</a>
+					        
+								<a class="douban" target="_blank" href="http://qianmo.com/lovewy/" title="douban">douban</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/imgyx" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/BestCoder/" style="font-size: 12.5px;">BestCoder</a> <a href="/tags/Codeforces/" style="font-size: 10px;">Codeforces</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/bestcoder/" style="font-size: 15px;">bestcoder</a> <a href="/tags/codeforces/" style="font-size: 10px;">codeforces</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/swiftype/" style="font-size: 10px;">swiftype</a> <a href="/tags/多校/" style="font-size: 17.5px;">多校</a> <a href="/tags/好声音/" style="font-size: 10px;">好声音</a> <a href="/tags/模板/" style="font-size: 10px;">模板</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/难题/" style="font-size: 10px;">难题</a> <a href="/tags/题解/" style="font-size: 20px;">题解</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://xuanwo.org/">xuanwo</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://ooooooooe.com/">大帝</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://fanzheng.org/">fz</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.altair21.com/">altair21</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://qianmo.com/lovewy/">我的阡陌</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://beidi.cugbteam.org/">北地资源</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.acfun.tv/">Acfun</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://weibo.com/u/5073535420?from=feed&loc=nickname">vy</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://litten.github.io/">litten</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://oeis.org">oeis</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://agar.io">Agar</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">本萌妹儿最近在奋斗中</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Mjolnir</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkl3j.com1.z0.glb.clouddn.com/c837b944c7dc012aa39b21e5fdc9d547%20(1).jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Mjolnir</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">even if you get killed,just walk it off!</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/题解">题解</a></li>
+		        
+					<li><a href="/categories/日志">日志</a></li>
+		        
+					<li><a href="/about">更新记录</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="rss" target="_blank" href="http://blog.csdn.net/mjoinir" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/guo-yi-60" title="zhihu">zhihu</a>
+			        
+						<a class="douban" target="_blank" href="http://qianmo.com/lovewy/" title="douban">douban</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/imgyx" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-2015-Multi-University-Training-Contest-5" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/04/2015-Multi-University-Training-Contest-5/" class="article-date">
+  	<time datetime="2015-08-04T13:35:51.000Z" itemprop="datePublished">2015-08-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+       2015 Multi-University Training Contest 5
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/多校/">多校</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/题解/">题解</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/多校/">多校</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>老规矩，先上水题</p>
+<h2 id="1002_MZL’s_xor"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5344" target="_blank" rel="external">1002    MZL’s xor</a></h2><p>Problem Description<br>MZL loves xor very much.Now he gets an array A.The length of A is n.He wants to know the xor of all (Ai+Aj)(1≤i,j≤n)<br>The xor of an array B is defined as B1 xor B2…xor Bn<br><a id="more"></a><br>Input<br>Multiple test cases, the first line contains an integer T(no more than 20), indicating the number of cases.<br>Each test case contains four integers:n,m,z,l<br>A1=0,Ai=(Ai−1∗m+z) mod l<br>1≤m,z,l≤5∗105,n=5∗105</p>
+<p>Output<br>For every test.print the answer.</p>
+<p>Sample Input<br>2<br>3 5 5 7<br>6 8 8 9</p>
+<p>Sample Output<br>14<br>16</p>
+<h3 id="题解">题解</h3><p>这道题就是给你一堆数，两两相加然后异或，同0异1，想象一个二维数组，只要不是在斜线上的点，我们总可以找到镜像点，so，只要把相同的数乘2然后异或就好了。<br>注意用long long </p>
+<h2 id="<!-￼0->"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> LL long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line">LL ans;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T;</span><br><span class="line">    <span class="keyword">int</span> n,m,z,l;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">    <span class="keyword">while</span>(T--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;n,&amp;m,&amp;z,&amp;l);</span><br><span class="line">         LL b=<span class="number">0</span>,c;</span><br><span class="line">        ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span><br><span class="line">         &#123;</span><br><span class="line">             c=(b*m+z)%l;</span><br><span class="line">             ans^=(<span class="number">2</span>*c);</span><br><span class="line">             b=c;</span><br><span class="line">         &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%I64d\n"</span>,ans);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2><h2 id="1005_MZL’s_chemistry"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5347" target="_blank" rel="external">1005    MZL’s chemistry</a></h2><p>Problem Description<br>MZL define F(X) as the first ionization energy of the chemical element X</p>
+<p>Now he get two chemical elements U,V,given as their atomic number,he wants to compare F(U) and F(V)</p>
+<p>It is guaranteed that atomic numbers belongs to the given set:{1,2,3,4,..18,35,36,53,54,85,86}</p>
+<p>It is guaranteed the two atomic numbers is either in the same period or in the same group</p>
+<p>It is guaranteed that x≠y</p>
+<p>Input<br>There are several test cases</p>
+<p>For each test case,there are two numbers u,v,means the atomic numbers of the two element</p>
+<p>Output<br>For each test case,if F(u)&gt;F(v),print “FIRST BIGGER”,else print”SECOND BIGGER”</p>
+<p>Sample Input<br>1 2<br>5 3</p>
+<p>Sample Output<br>SECOND BIGGER<br>FIRST BIGGER</p>
+<h3 id="题解-1">题解</h3><p>我拒绝写题解</p>
+<h2 id="<!-￼1->"><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;cmath&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;iomanip&gt;</span><br><span class="line">#include &lt;queue&gt;</span><br><span class="line">#include &lt;ctime&gt;</span><br><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">#define maxn <span class="number">1000005</span></span><br><span class="line">#define INF 12222</span><br><span class="line">#define ll long long</span><br><span class="line">using namespace std<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">int u,v<span class="comment">;</span></span><br><span class="line">int f[200]=&#123;<span class="number">0,1312,237</span><span class="number">2.3,520</span>.<span class="number">2,932,80</span><span class="number">0.6,1086</span>.<span class="number">5,1402.3</span>,<span class="number">1313.9,168</span><span class="number">1,2080.7</span>,<span class="number">495.8,73</span><span class="number">7.7,577</span>.<span class="number">5,786.5</span>,<span class="number">1011.8,99</span><span class="number">9.6,1251</span>.<span class="number">2,1520.6</span>,</span><br><span class="line"><span class="number">418.8,58</span><span class="number">9.8,633</span>.<span class="number">1,658.8</span>,<span class="number">650.9,65</span><span class="number">2.9,717</span>.<span class="number">3,762.5</span>,<span class="number">760.4,73</span><span class="number">7.1,745</span>.<span class="number">5,906.4</span>,<span class="number">578.8,76</span><span class="number">2,947,94</span><span class="number">1,1139.9</span>,<span class="number">1350.8,40</span><span class="number">3,549.5</span>,<span class="number">600,640</span>.<span class="number">1,652.1</span>,</span><br><span class="line"><span class="number">684.3,70</span><span class="number">2,710.2</span>,<span class="number">719.7,80</span><span class="number">4.4,731</span>,<span class="number">867.8,55</span><span class="number">8.3,708</span>.<span class="number">6,834,86</span><span class="number">9.3,1008</span>.<span class="number">4,1170.4</span>,<span class="number">375.7,50</span><span class="number">2.9,538</span>.<span class="number">1,534.4</span>,<span class="number">527,533</span>.<span class="number">1,540,54</span><span class="number">4.5,547</span>.<span class="number">1,593.4</span>,</span><br><span class="line"><span class="number">565.8,57</span><span class="number">3,581,58</span><span class="number">9.3,596</span>.<span class="number">7,603.4</span>,<span class="number">523.5,65</span><span class="number">8.5,761</span>,<span class="number">770,760</span>,<span class="number">840,880</span>,<span class="number">870,890</span>.<span class="number">1,1007.1</span>,<span class="number">589.4,71</span><span class="number">5.6,703</span>,<span class="number">812.1,89</span><span class="number">0,1037,38</span><span class="number">0,509.3</span>,<span class="number">499,587</span></span><br><span class="line">,<span class="number">568,597</span>.<span class="number">6,604.5</span>,<span class="number">584.7,57</span><span class="number">8,581,60</span><span class="number">1,608,61</span><span class="number">9,627,63</span><span class="number">5,642,47</span>0,580,&#125;<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    while(cin&gt;&gt;u&gt;&gt;v)</span><br><span class="line">    &#123;</span><br><span class="line">        if(f[u]&gt;f[v])</span><br><span class="line">        &#123;</span><br><span class="line">            cout&lt;&lt;"FIRST BIGGER"&lt;&lt;endl<span class="comment">;</span></span><br><span class="line">        &#125;</span><br><span class="line">        if(f[u]&lt;=f[v])</span><br><span class="line">        &#123;</span><br><span class="line">            cout&lt;&lt;"SECOND BIGGER"&lt;&lt;endl<span class="comment">;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2><h2 id="1007_MZL’s_simple_problem"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5349" target="_blank" rel="external">1007    MZL’s simple problem</a></h2><p>Problem Description<br>A simple problem<br>Problem Description<br>You have a multiple set,and now there are three kinds of operations:<br>1 x : add number x to set<br>2 : delete the minimum number (if the set is empty now,then ignore it)<br>3 : query the maximum number (if the set is empty now,the answer is 0)</p>
+<p>Input<br>The first line contains a number N (N≤106),representing the number of operations.<br>Next N line ,each line contains one or two numbers,describe one operation.<br>The number in this set is not greater than 109. </p>
+<p>Output<br>For each operation 3,output a line representing the answer.</p>
+<p>Sample Input<br>6<br>1 2<br>1 3<br>3<br>1 3<br>1 4<br>3</p>
+<p>Sample Output<br>3<br>4</p>
+<h3 id="题解-2">题解</h3><p>这道题还是蛮有用的，刚开始想用set搞，结果会T。其实就是记录最大值，在记录1操作的次数和2操作的次数判断是否为空。为空记得把最大值再次初始化。</p>
+<h2 id="<!-￼2->"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdlib&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cmath&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;ctime&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;algorithm&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;string&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;vector&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;deque&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;list&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;set&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;map&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;stack&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;queue&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;numeric&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iomanip&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;bitset&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;sstream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;fstream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;limits.h&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> debug "output for debug\n"</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> pi (acos(-1.0))</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> eps (1e-4)</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> inf (1&lt;&lt;28)</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> sqr(x) (x) * (x)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ULL;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    LL n, a, b, maxn = -<span class="number">1e13</span>, num1 = <span class="number">0</span>, num2 = <span class="number">0</span>, sum = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">while</span>(n--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;a);</span><br><span class="line">        <span class="keyword">if</span>(a == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;b);</span><br><span class="line">            num1++;</span><br><span class="line">            sum++;</span><br><span class="line">            <span class="keyword">if</span>(maxn &lt; b)</span><br><span class="line">                maxn = b;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(a == <span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(sum &gt; <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                sum--;</span><br><span class="line">                num2++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(a == <span class="number">3</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(num2 &gt;= num1)</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"0\n"</span>);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, maxn);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(num2 &gt;= num1)</span><br><span class="line">            maxn = -<span class="number">1e13</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/08/04/BestCoder-Round-9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">BestCoder Round #9</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2015-Multi-University-Training-Contest-5" data-title=" 2015 Multi-University Training Contest 5" data-url="http://guoyuxiang.com/2015/08/04/2015-Multi-University-Training-Contest-5/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"mjolnir"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Mjolnir
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+	<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','bgPZswnFC5YQTKMKbSFN','2.0.0');
+</script>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-65578540-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div id="totop" style="position:fixed;bottom:45px;right:15px;cursor: pointer;">
+<a title="to-the-top"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+  </div>
+</body>
+</html>
