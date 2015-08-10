@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>BestCoder Round #50 (div.2) | Mjolnir</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1001 Distribution money问题描述地主小花难得当一回好人，这次她准备给长工们发津贴。有些长工会偷偷地在领完津贴后又排回队伍里去领津贴。不过小花对此表示无所谓，因为她发的是固定数额的津贴。但是如果有人领到的津贴超过其他所有人的总和的话，小花为了显示自己的公正，会去惩罚他。现已知每个来领津贴的人会登记下自己的工号。输入描述输入有多组数据，每组第一行为一个n(1 &amp;lt; = n &amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BestCoder Round #50 (div.2)">
+<meta property="og:url" content="http://guoyuxiang.com/2015/08/10/BestCoder-Round-50-div-2/index.html">
+<meta property="og:site_name" content="Mjolnir">
+<meta property="og:description" content="1001 Distribution money问题描述地主小花难得当一回好人，这次她准备给长工们发津贴。有些长工会偷偷地在领完津贴后又排回队伍里去领津贴。不过小花对此表示无所谓，因为她发的是固定数额的津贴。但是如果有人领到的津贴超过其他所有人的总和的话，小花为了显示自己的公正，会去惩罚他。现已知每个来领津贴的人会登记下自己的工号。输入描述输入有多组数据，每组第一行为一个n(1 &amp;lt; = n &amp;">
+<meta property="og:updated_time" content="2015-08-10T06:05:34.114Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BestCoder Round #50 (div.2)">
+<meta name="twitter:description" content="1001 Distribution money问题描述地主小花难得当一回好人，这次她准备给长工们发津贴。有些长工会偷偷地在领完津贴后又排回队伍里去领津贴。不过小花对此表示无所谓，因为她发的是固定数额的津贴。但是如果有人领到的津贴超过其他所有人的总和的话，小花为了显示自己的公正，会去惩罚他。现已知每个来领津贴的人会登记下自己的工号。输入描述输入有多组数据，每组第一行为一个n(1 &amp;lt; = n &amp;">
+  
+    <link rel="alternative" href="/atom.xml" title="Mjolnir" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkl3j.com1.z0.glb.clouddn.com/favicon-20150727113535562.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?99aed96d60fcd4cdd709e9a79e140255";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?99aed96d60fcd4cdd709e9a79e140255";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+<form class="search" method="get" accept-charset="utf-8">
+<label>Search</label>
+			<input type="text" id="chillax-search-input" class="st-search-input_my" maxlength="30" placeholder="我是翔仔花了一天捣鼓出来的搜索框" />
+		</form>
+	<header id="header" class="inner">
+	
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkl3j.com1.z0.glb.clouddn.com/c837b944c7dc012aa39b21e5fdc9d547%20(1).jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Mjolnir</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">even if you get killed,just walk it off!</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/题解">题解</a></li>
+				        
+							<li><a href="/categories/日志">日志</a></li>
+				        
+							<li><a href="/about">更新记录</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="rss" target="_blank" href="http://blog.csdn.net/mjoinir" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/guo-yi-60" title="zhihu">zhihu</a>
+					        
+								<a class="douban" target="_blank" href="http://qianmo.com/lovewy/" title="douban">douban</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/imgyx" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/BestCoder/" style="font-size: 12.5px;">BestCoder</a> <a href="/tags/Codeforces/" style="font-size: 10px;">Codeforces</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/bestcoder/" style="font-size: 15px;">bestcoder</a> <a href="/tags/codeforces/" style="font-size: 10px;">codeforces</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/swiftype/" style="font-size: 10px;">swiftype</a> <a href="/tags/多校/" style="font-size: 17.5px;">多校</a> <a href="/tags/模板/" style="font-size: 10px;">模板</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/难题/" style="font-size: 10px;">难题</a> <a href="/tags/题解/" style="font-size: 20px;">题解</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://xuanwo.org/">xuanwo</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://ooooooooe.com/">大帝</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://fanzheng.org/">fz</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.altair21.com/">altair21</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://qianmo.com/lovewy/">我的阡陌</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://beidi.cugbteam.org/">北地资源</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.acfun.tv/">Acfun</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://weibo.com/u/5073535420?from=feed&loc=nickname">vy</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://litten.github.io/">litten</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://oeis.org">oeis</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://agar.io">Agar</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">本萌妹儿最近在奋斗中</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Mjolnir</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkl3j.com1.z0.glb.clouddn.com/c837b944c7dc012aa39b21e5fdc9d547%20(1).jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Mjolnir</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">even if you get killed,just walk it off!</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/题解">题解</a></li>
+		        
+					<li><a href="/categories/日志">日志</a></li>
+		        
+					<li><a href="/about">更新记录</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="rss" target="_blank" href="http://blog.csdn.net/mjoinir" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/guo-yi-60" title="zhihu">zhihu</a>
+			        
+						<a class="douban" target="_blank" href="http://qianmo.com/lovewy/" title="douban">douban</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/imgyx" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-BestCoder-Round-50-div-2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/10/BestCoder-Round-50-div-2/" class="article-date">
+  	<time datetime="2015-08-10T02:20:28.000Z" itemprop="datePublished">2015-08-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      BestCoder Round #50 (div.2)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bestcoder/">bestcoder</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/题解/">题解</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/bestcoder/">bestcoder</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1001_Distribution_money"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5364" target="_blank" rel="external">1001 Distribution money</a></h2><p>问题描述<br>地主小花难得当一回好人，这次她准备给长工们发津贴。有些长工会偷偷地在领完津贴后又排回队伍里去领津贴。不过小花对此表示无所谓，因为她发的是固定数额的津贴。但是如果有人领到的津贴超过其他所有人的总和的话，小花为了显示自己的公正，会去惩罚他。现已知每个来领津贴的人会登记下自己的工号。<br>输入描述<br>输入有多组数据，每组第一行为一个n(1 &lt; = n &lt; = 1000)，表示有多少津贴被领，第二行n个数字a1,a2…an，表示n个来领津贴的人的工号（0 &lt; = a[i] &lt; 10000）。<br><a id="more"></a><br>输出描述<br>输出一个数字，表示被惩罚的人的工号。<br>若没有人需要被惩罚，则输出-1。<br>输入样例<br>3<br>1 1 2<br>4<br>2 1 4 3<br>输出样例<br>1<br>-1<br>Hint<br>第一个样例中，1号工人拿走的钱超过其他所有人总和，所以输出1。<br>第二个样例中，没有拿到的钱超过其他所有人的总和，所以输出-1.</p>
+<h3 id="题解">题解</h3><p>某个人领的工资不能超过其他人的总和，数据上限不是很大我就直接用数组存了~每份钱都是一样的最后判断有没有某人超一半就好。</p>
+<h2 id="<!-￼0->"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstring&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> vis[<span class="number">10001</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;t)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> num[t],flag=<span class="number">1</span>;</span><br><span class="line">        <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;t;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;num[i];</span><br><span class="line">            vis[num[i]]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(t%<span class="number">2</span>)</span><br><span class="line">         &#123; <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10001</span>;i++)</span><br><span class="line">        <span class="keyword">if</span>(vis[i]&gt;=t/<span class="number">2</span>)  &#123;<span class="built_in">cout</span>&lt;&lt;i&lt;&lt;endl;flag=<span class="number">0</span>;<span class="keyword">break</span>;&#125;&#125;</span><br><span class="line">          <span class="keyword">else</span></span><br><span class="line">            &#123;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10001</span>;i++)</span><br><span class="line">          <span class="keyword">if</span>(vis[i]&gt;t/<span class="number">2</span>)    &#123;<span class="built_in">cout</span>&lt;&lt;i&lt;&lt;endl;flag=<span class="number">0</span>;<span class="keyword">break</span>;&#125;&#125;</span><br><span class="line">          <span class="keyword">if</span>(flag)   <span class="built_in">cout</span>&lt;&lt;<span class="string">"-1"</span>&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2><h2 id="1002_Run"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5365" target="_blank" rel="external">1002 Run</a></h2><p>问题描述<br>小花是一个热爱健身的姑娘，这天她下载了一个跑步软件，这个软件可以记录下小花跑步的轨迹。小花决定去公园跑步。公园里有许许多多的座椅，小花希望在一些座椅休息一下，并且她在两条座椅之间只跑直线。小花是一个完美主义者，她希望自己最后的轨迹是一个正三边形或者正四边形或者正五边形或者正六边形。小花会从某条座椅开始打开跑步软件，并在回到这个座椅后关闭。<br>请问小花有多少种跑法。注：若两种跑法经过的座椅集合相同则认为是一种跑法。且经过一条座椅时没有必要一定停下来<br>输入描述<br>输入有多组数据<br>每组数据第一行为一个n（1 &lt; = n &lt; = 20）表示座椅数量<br>接下来n行，每行两个整数xi,yi(0 &lt; = xi,yi &lt; = 8)表示座椅的坐标<br>输出描述<br>输出方案数<br>输入样例<br>4<br>0 0<br>0 1<br>1 0<br>1 1<br>输出样例<br>1</p>
+<h3 id="题解-1">题解</h3><p>细想还正是，坐标上的点不可能组成正三角形，正五边形，正六边形的……所以暴力枚举每四个点判断能不能组成正方形就好<br><figure class="highlight stata"><figcaption><span>c++文件输入输出</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#<span class="keyword">include</span>&lt;fstream&gt;</span><br><span class="line">istream <span class="keyword">in</span>(<span class="string">"in.txt"</span>);</span><br><span class="line">ostream <span class="keyword">out</span>(<span class="string">"out.txt"</span>);</span><br><span class="line"><span class="keyword">in</span>.<span class="keyword">close</span>();</span><br><span class="line"><span class="keyword">out</span>.<span class="keyword">close</span>();</span><br></pre></td></tr></table></figure></p>
+<h2 id="<!-￼2->"><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">#<span class="atom">include</span> &lt;<span class="atom">iostream</span>&gt;</span><br><span class="line">#<span class="atom">include</span>&lt;<span class="atom">cstring</span>&gt;</span><br><span class="line">#<span class="atom">include</span>&lt;<span class="atom">algorithm</span>&gt;</span><br><span class="line">#<span class="atom">include</span>&lt;<span class="atom">fstream</span>&gt;</span><br><span class="line"><span class="atom">using</span> <span class="atom">namespace</span> <span class="atom">std</span>;</span><br><span class="line"><span class="atom">int</span> <span class="atom">ans</span>;</span><br><span class="line">//<span class="atom">ofstream</span> <span class="atom">f1</span>(<span class="string">"out.txt"</span>);</span><br><span class="line"></span><br><span class="line"><span class="atom">struct</span> <span class="atom">node</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="atom">int</span> <span class="atom">x</span>,<span class="atom">y</span>,<span class="atom">pos</span>;</span><br><span class="line">&#125;<span class="atom">chat</span>[<span class="number">20</span>];</span><br><span class="line"><span class="atom">void</span> <span class="atom">check</span>(<span class="atom">int</span> <span class="atom">a</span>,<span class="atom">int</span> <span class="atom">b</span>,<span class="atom">int</span> <span class="atom">c</span>,<span class="atom">int</span> <span class="atom">d</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="atom">int</span> <span class="atom">vis</span>[<span class="number">6</span>];</span><br><span class="line">    <span class="atom">vis</span>[<span class="number">0</span>]=(<span class="atom">chat</span>[<span class="atom">a</span>].<span class="atom">x</span>-<span class="atom">chat</span>[<span class="atom">b</span>].<span class="atom">x</span>)*(<span class="atom">chat</span>[<span class="atom">a</span>].<span class="atom">x</span>-<span class="atom">chat</span>[<span class="atom">b</span>].<span class="atom">x</span>)+(<span class="atom">chat</span>[<span class="atom">a</span>].<span class="atom">y</span>-<span class="atom">chat</span>[<span class="atom">b</span>].<span class="atom">y</span>)*(<span class="atom">chat</span>[<span class="atom">a</span>].<span class="atom">y</span>-<span class="atom">chat</span>[<span class="atom">b</span>].<span class="atom">y</span>);</span><br><span class="line">    <span class="atom">vis</span>[<span class="number">1</span>]=(<span class="atom">chat</span>[<span class="atom">a</span>].<span class="atom">x</span>-<span class="atom">chat</span>[<span class="atom">c</span>].<span class="atom">x</span>)*(<span class="atom">chat</span>[<span class="atom">a</span>].<span class="atom">x</span>-<span class="atom">chat</span>[<span class="atom">c</span>].<span class="atom">x</span>)+(<span class="atom">chat</span>[<span class="atom">a</span>].<span class="atom">y</span>-<span class="atom">chat</span>[<span class="atom">c</span>].<span class="atom">y</span>)*(<span class="atom">chat</span>[<span class="atom">a</span>].<span class="atom">y</span>-<span class="atom">chat</span>[<span class="atom">c</span>].<span class="atom">y</span>);</span><br><span class="line">    <span class="atom">vis</span>[<span class="number">2</span>]=(<span class="atom">chat</span>[<span class="atom">a</span>].<span class="atom">x</span>-<span class="atom">chat</span>[<span class="atom">d</span>].<span class="atom">x</span>)*(<span class="atom">chat</span>[<span class="atom">a</span>].<span class="atom">x</span>-<span class="atom">chat</span>[<span class="atom">d</span>].<span class="atom">x</span>)+(<span class="atom">chat</span>[<span class="atom">a</span>].<span class="atom">y</span>-<span class="atom">chat</span>[<span class="atom">d</span>].<span class="atom">y</span>)*(<span class="atom">chat</span>[<span class="atom">a</span>].<span class="atom">y</span>-<span class="atom">chat</span>[<span class="atom">d</span>].<span class="atom">y</span>);</span><br><span class="line">    <span class="atom">vis</span>[<span class="number">3</span>]=(<span class="atom">chat</span>[<span class="atom">c</span>].<span class="atom">x</span>-<span class="atom">chat</span>[<span class="atom">b</span>].<span class="atom">x</span>)*(<span class="atom">chat</span>[<span class="atom">c</span>].<span class="atom">x</span>-<span class="atom">chat</span>[<span class="atom">b</span>].<span class="atom">x</span>)+(<span class="atom">chat</span>[<span class="atom">c</span>].<span class="atom">y</span>-<span class="atom">chat</span>[<span class="atom">b</span>].<span class="atom">y</span>)*(<span class="atom">chat</span>[<span class="atom">c</span>].<span class="atom">y</span>-<span class="atom">chat</span>[<span class="atom">b</span>].<span class="atom">y</span>);</span><br><span class="line">    <span class="atom">vis</span>[<span class="number">4</span>]=(<span class="atom">chat</span>[<span class="atom">d</span>].<span class="atom">x</span>-<span class="atom">chat</span>[<span class="atom">b</span>].<span class="atom">x</span>)*(<span class="atom">chat</span>[<span class="atom">d</span>].<span class="atom">x</span>-<span class="atom">chat</span>[<span class="atom">b</span>].<span class="atom">x</span>)+(<span class="atom">chat</span>[<span class="atom">d</span>].<span class="atom">y</span>-<span class="atom">chat</span>[<span class="atom">b</span>].<span class="atom">y</span>)*(<span class="atom">chat</span>[<span class="atom">d</span>].<span class="atom">y</span>-<span class="atom">chat</span>[<span class="atom">b</span>].<span class="atom">y</span>);</span><br><span class="line">    <span class="atom">vis</span>[<span class="number">5</span>]=(<span class="atom">chat</span>[<span class="atom">d</span>].<span class="atom">x</span>-<span class="atom">chat</span>[<span class="atom">c</span>].<span class="atom">x</span>)*(<span class="atom">chat</span>[<span class="atom">d</span>].<span class="atom">x</span>-<span class="atom">chat</span>[<span class="atom">c</span>].<span class="atom">x</span>)+(<span class="atom">chat</span>[<span class="atom">d</span>].<span class="atom">y</span>-<span class="atom">chat</span>[<span class="atom">c</span>].<span class="atom">y</span>)*(<span class="atom">chat</span>[<span class="atom">d</span>].<span class="atom">y</span>-<span class="atom">chat</span>[<span class="atom">c</span>].<span class="atom">y</span>);</span><br><span class="line">    <span class="atom">sort</span>(<span class="atom">vis</span>,<span class="atom">vis</span>+<span class="number">6</span>);</span><br><span class="line">    //<span class="atom">for</span>(<span class="atom">int</span> <span class="atom">i</span>=<span class="number">0</span>;<span class="atom">i</span>&lt;<span class="number">6</span>;<span class="atom">i</span>++)</span><br><span class="line">  // <span class="atom">f1</span>&lt;&lt;<span class="atom">vis</span>[<span class="atom">i</span>]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    //<span class="atom">f1</span>&lt;&lt;<span class="atom">endl</span>;</span><br><span class="line">    <span class="atom">if</span>(<span class="atom">vis</span>[<span class="number">0</span>]==<span class="atom">vis</span>[<span class="number">1</span>]&amp;&amp;<span class="atom">vis</span>[<span class="number">0</span>]==<span class="atom">vis</span>[<span class="number">2</span>]&amp;&amp;<span class="atom">vis</span>[<span class="number">0</span>]==<span class="atom">vis</span>[<span class="number">3</span>]&amp;&amp;<span class="atom">vis</span>[<span class="number">5</span>]==<span class="atom">vis</span>[<span class="number">4</span>])  <span class="atom">ans</span>++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="atom">int</span> <span class="atom">main</span>()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">   <span class="atom">int</span> <span class="atom">t</span>;</span><br><span class="line">   <span class="atom">while</span>(<span class="atom">cin</span>&gt;&gt;<span class="atom">t</span>)</span><br><span class="line">   &#123;</span><br><span class="line">       <span class="atom">for</span>(<span class="atom">int</span> <span class="atom">i</span>=<span class="number">0</span>;<span class="atom">i</span>&lt;<span class="atom">t</span>;<span class="atom">i</span>++)</span><br><span class="line">           <span class="atom">cin</span>&gt;&gt;<span class="atom">chat</span>[<span class="atom">i</span>].<span class="atom">x</span>&gt;&gt;<span class="atom">chat</span>[<span class="atom">i</span>].<span class="atom">y</span>;</span><br><span class="line">       <span class="atom">ans</span>=<span class="number">0</span>;</span><br><span class="line">       <span class="atom">for</span>(<span class="atom">int</span> <span class="atom">i</span>=<span class="number">0</span>;<span class="atom">i</span>&lt;<span class="atom">t</span>-<span class="number">3</span>;<span class="atom">i</span>++)</span><br><span class="line">        <span class="atom">for</span>(<span class="atom">int</span> <span class="atom">k</span>=<span class="atom">i</span>+<span class="number">1</span>;<span class="atom">k</span>&lt;<span class="atom">t</span>-<span class="number">2</span>;<span class="atom">k</span>++)</span><br><span class="line">          <span class="atom">for</span>(<span class="atom">int</span> <span class="atom">j</span>=<span class="atom">k</span>+<span class="number">1</span>;<span class="atom">j</span>&lt;<span class="atom">t</span>-<span class="number">1</span>;<span class="atom">j</span>++)</span><br><span class="line">            <span class="atom">for</span>(<span class="atom">int</span> <span class="atom">x</span>=<span class="atom">j</span>+<span class="number">1</span>;<span class="atom">x</span>&lt;<span class="atom">t</span>;<span class="atom">x</span>++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="atom">if</span>(<span class="atom">i</span>==<span class="atom">k</span>||<span class="atom">i</span>==<span class="atom">j</span>||<span class="atom">i</span>==<span class="atom">x</span>||<span class="atom">k</span>==<span class="atom">j</span>||<span class="atom">k</span>==<span class="atom">x</span>||<span class="atom">j</span>==<span class="atom">x</span>)   <span class="atom">continue</span>;</span><br><span class="line">                //<span class="atom">f1</span>&lt;&lt;<span class="atom">i</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="atom">k</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="atom">j</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="atom">x</span>&lt;&lt;<span class="atom">endl</span>;</span><br><span class="line"></span><br><span class="line">                <span class="atom">check</span>(<span class="atom">i</span>,<span class="atom">k</span>,<span class="atom">j</span>,<span class="atom">x</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">       <span class="atom">cout</span>&lt;&lt;<span class="atom">ans</span>&lt;&lt;<span class="atom">endl</span>;</span><br><span class="line">   &#125;</span><br><span class="line"> //  <span class="atom">f1</span>.<span class="atom">close</span>();</span><br><span class="line">    <span class="atom">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2><h2 id="1003_The_mook_jong"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5366" target="_blank" rel="external">1003 The mook jong</a></h2><p>问题描述<br>ZJiaQ为了强身健体，决定通过木人桩练习武术。ZJiaQ希望把木人桩摆在自家的那个由1<em>1的地砖铺成的1</em>n的院子里。由于ZJiaQ是个强迫症，所以他要把一个木人桩正好摆在一个地砖上，由于木人桩手比较长，所以两个木人桩之间地砖必须大于等于两个，现在ZJiaQ想知道在至少摆放一个木人桩的情况下，有多少种摆法。<br>输入描述<br>输入有多组数据，每组数据第一行为一个整数n(1 &lt; = n &lt; = 60)<br>输出描述<br>对于每组数据输出一行表示摆放方案数<br>输入样例<br>1<br>2<br>3<br>4<br>5<br>6<br>输出样例<br>1<br>2<br>3<br>5<br>8<br>12</p>
+<h3 id="题解-2">题解</h3><p>比赛的时候用的DFS打表，然后交表过的……不优越啊=。=令f[i]为最后一个木人桩摆放在i位置的方案，令s[i]为f[i]的前缀和。很容易就能想到f[i]=s[i-3]+1,s[i]=s[i-1]+f[i],而s[n]即是所求答案。本题唯一一个值得注意的点就是当n接近60时会爆int。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstring&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">   <span class="keyword">long</span> <span class="keyword">long</span> f[<span class="number">61</span>],s[<span class="number">61</span>];</span><br><span class="line">   <span class="built_in">memset</span>(f,<span class="number">0</span>,<span class="keyword">sizeof</span>(f));</span><br><span class="line">   <span class="built_in">memset</span>(s,<span class="number">0</span>,<span class="keyword">sizeof</span>(s));</span><br><span class="line">   s[<span class="number">1</span>]=<span class="number">1</span>;s[<span class="number">2</span>]=<span class="number">2</span>;s[<span class="number">3</span>]=<span class="number">3</span>;</span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">4</span>;i&lt;=<span class="number">60</span>;i++)</span><br><span class="line">   &#123;</span><br><span class="line">       f[i]=s[i-<span class="number">3</span>]+<span class="number">1</span>;</span><br><span class="line">       s[i]=s[i-<span class="number">1</span>]+f[i];</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">int</span> t;</span><br><span class="line">   <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;t)</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;s[t]&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>DFS<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstring&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> sum;</span><br><span class="line">   <span class="keyword">int</span> t;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x+<span class="number">3</span>&gt;=t)   <span class="keyword">return</span>;</span><br><span class="line">     sum+=(t-x-<span class="number">3</span>);</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">int</span> i=x+<span class="number">3</span>;i&lt;t;i++)</span><br><span class="line">     dfs(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;t)</span><br><span class="line">    &#123;</span><br><span class="line">        sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;t;i++)</span><br><span class="line">            dfs(i);</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;sum+t&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>上帝说要有DP，于是我们来发DP</p>
+<h2 id="<!-￼5->"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> dp[<span class="number">60</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n) == <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            dp[i] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j + <span class="number">3</span> &lt;= i; ++j)</span><br><span class="line">            &#123;</span><br><span class="line">                dp[i] += dp[j];</span><br><span class="line">            &#125;</span><br><span class="line">            ans += dp[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%I64d\n"</span>, ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/08/10/BestCoder-Round-12/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">BestCoder Round #12</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="BestCoder-Round-50-div-2" data-title="BestCoder Round #50 (div.2)" data-url="http://guoyuxiang.com/2015/08/10/BestCoder-Round-50-div-2/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"mjolnir"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Mjolnir
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+	<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','bgPZswnFC5YQTKMKbSFN','2.0.0');
+</script>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-65578540-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div id="totop" style="position:fixed;bottom:45px;right:15px;cursor: pointer;">
+<a title="to-the-top"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+  </div>
+</body>
+</html>
