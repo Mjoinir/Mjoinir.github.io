@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Codeforces Round #315 (Div. 2) | Mjolnir</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="A. Musicittle Lesha loves listening to music via his smartphone. But the smartphone doesn’t have much memory, so Lesha listens to his favorite songs in a well-known social network InTalk.
+Unfortunatel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces Round #315 (Div. 2)">
+<meta property="og:url" content="http://guoyuxiang.com/2015/08/12/Codeforces-Round-315-Div-2/index.html">
+<meta property="og:site_name" content="Mjolnir">
+<meta property="og:description" content="A. Musicittle Lesha loves listening to music via his smartphone. But the smartphone doesn’t have much memory, so Lesha listens to his favorite songs in a well-known social network InTalk.
+Unfortunatel">
+<meta property="og:updated_time" content="2015-08-12T02:10:44.417Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Codeforces Round #315 (Div. 2)">
+<meta name="twitter:description" content="A. Musicittle Lesha loves listening to music via his smartphone. But the smartphone doesn’t have much memory, so Lesha listens to his favorite songs in a well-known social network InTalk.
+Unfortunatel">
+  
+    <link rel="alternative" href="/atom.xml" title="Mjolnir" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkl3j.com1.z0.glb.clouddn.com/favicon-20150727113535562.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?99aed96d60fcd4cdd709e9a79e140255";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?99aed96d60fcd4cdd709e9a79e140255";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+<form class="search" method="get" accept-charset="utf-8">
+<label>Search</label>
+			<input type="text" id="chillax-search-input" class="st-search-input_my" maxlength="30" placeholder="我是翔仔花了一天捣鼓出来的搜索框" />
+		</form>
+	<header id="header" class="inner">
+	
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkl3j.com1.z0.glb.clouddn.com/c837b944c7dc012aa39b21e5fdc9d547%20(1).jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Mjolnir</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">even if you get killed,just walk it off!</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/题解">题解</a></li>
+				        
+							<li><a href="/categories/日志">日志</a></li>
+				        
+							<li><a href="/about">更新记录</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="rss" target="_blank" href="http://blog.csdn.net/mjoinir" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/guo-yi-60" title="zhihu">zhihu</a>
+					        
+								<a class="douban" target="_blank" href="http://qianmo.com/lovewy/" title="douban">douban</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/imgyx" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/BestCoder/" style="font-size: 13.33px;">BestCoder</a> <a href="/tags/Codeforces/" style="font-size: 10px;">Codeforces</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/bestcoder/" style="font-size: 16.67px;">bestcoder</a> <a href="/tags/codeforces/" style="font-size: 10px;">codeforces</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/swiftype/" style="font-size: 10px;">swiftype</a> <a href="/tags/多校/" style="font-size: 16.67px;">多校</a> <a href="/tags/模板/" style="font-size: 10px;">模板</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/难题/" style="font-size: 10px;">难题</a> <a href="/tags/题解/" style="font-size: 20px;">题解</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://xuanwo.org/">xuanwo</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://ooooooooe.com/">大帝</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://fanzheng.org/">fz</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.altair21.com/">altair21</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://qianmo.com/lovewy/">我的阡陌</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://beidi.cugbteam.org/">北地资源</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.acfun.tv/">Acfun</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://weibo.com/u/5073535420?from=feed&loc=nickname">vy</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://litten.github.io/">litten</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://oeis.org">oeis</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://agar.io">Agar</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">本萌妹儿最近在奋斗中</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Mjolnir</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkl3j.com1.z0.glb.clouddn.com/c837b944c7dc012aa39b21e5fdc9d547%20(1).jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Mjolnir</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">even if you get killed,just walk it off!</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/题解">题解</a></li>
+		        
+					<li><a href="/categories/日志">日志</a></li>
+		        
+					<li><a href="/about">更新记录</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="rss" target="_blank" href="http://blog.csdn.net/mjoinir" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/guo-yi-60" title="zhihu">zhihu</a>
+			        
+						<a class="douban" target="_blank" href="http://qianmo.com/lovewy/" title="douban">douban</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/imgyx" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Codeforces-Round-315-Div-2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/12/Codeforces-Round-315-Div-2/" class="article-date">
+  	<time datetime="2015-08-12T01:50:42.000Z" itemprop="datePublished">2015-08-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Codeforces Round #315 (Div. 2)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="A-_Music"><a href="http://codeforces.com/contest/569/problem/A" target="_blank" rel="external">A. Music</a></h2><p>ittle Lesha loves listening to music via his smartphone. But the smartphone doesn’t have much memory, so Lesha listens to his favorite songs in a well-known social network InTalk.</p>
+<p>Unfortunately, internet is not that fast in the city of Ekaterinozavodsk and the song takes a lot of time to download. But Lesha is quite impatient. The song’s duration is T seconds. Lesha downloads the first S seconds of the song and plays it. When the playback reaches the point that has not yet been downloaded, Lesha immediately plays the song from the start (the loaded part of the song stays in his phone, and the download is continued from the same place), and it happens until the song is downloaded completely and Lesha listens to it to the end. For q seconds of real time the Internet allows you to download q - 1 seconds of the track.</p>
+<p>Tell Lesha, for how many times he will start the song, including the very first start.<br><a id="more"></a><br>Input<br>The single line contains three integers T,S,q (2≤q≤10^4, 1≤S&lt;T≤10^5).</p>
+<p>Output<br>Print a single integer — the number of times the song will be restarted.</p>
+<p>Sample test(s)<br>input<br>5 2 2<br>output<br>2<br>input<br>5 4 7<br>output<br>1<br>input<br>6 2 3<br>output<br>1<br>Note<br>In the first test, the song is played twice faster than it is downloaded, which means that during four first seconds Lesha reaches the moment that has not been downloaded, and starts the song again. After another two seconds, the song is downloaded completely, and thus, Lesha starts the song twice.</p>
+<p>In the second test, the song is almost downloaded, and Lesha will start it only once.</p>
+<p>In the third sample test the download finishes and Lesha finishes listening at the same moment. Note that song isn’t restarted in this case.</p>
+<h3 id="题解">题解</h3><p>题意给出，下载一首歌，刚开始下载s,然后，当听的时候有q,同步下载的为q -1 ,当听到没有下载的时候，就会回退到刚开始，要求，返回头的次<br>数。<br>列方程听到t的时候，刚好听到没下载的位置。得 s + (q -1 ) <em> t = q </em> t;所以t = s;听到q * s的时候，就要回退开始，统计一下就可以了。</p>
+<h2 id="<!-￼0->"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;iostream&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t,s,q;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t&gt;&gt;s&gt;&gt;q;</span><br><span class="line">    <span class="keyword">int</span> num=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(s&lt;t)</span><br><span class="line">    &#123;</span><br><span class="line">        s*=q;</span><br><span class="line">        num++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;num&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2><h2 id="B-_Inventory"><a href="http://codeforces.com/contest/569/problem/B" target="_blank" rel="external">B. Inventory</a></h2><p>Companies always have a lot of equipment, furniture and other things. All of them should be tracked. To do this, there is an inventory number assigned with each item. It is much easier to create a database by using those numbers and keep the track of everything.</p>
+<p>During an audit, you were surprised to find out that the items are not numbered sequentially, and some items even share the same inventory number! There is an urgent need to fix it. You have chosen to make the numbers of the items sequential, starting with 1. Changing a number is quite a time-consuming process, and you would like to make maximum use of the current numbering.</p>
+<p>You have been given information on current inventory numbers for n items in the company. Renumber items so that their inventory numbers form a permutation of numbers from 1 to n by changing the number of as few items as possible. Let us remind you that a set of n numbers forms a permutation if all the numbers are in the range from 1 to n, and no two numbers are equal.</p>
+<p>Input<br>The first line contains a single integer n — the number of items (1 ≤ n ≤ 105).</p>
+<p>The second line contains n numbers a1, a2, …, an (1 ≤ ai ≤ 105) — the initial inventory numbers of the items.</p>
+<p>Output<br>Print n numbers — the final inventory numbers of the items in the order they occur in the input. If there are multiple possible answers, you may print any of them.</p>
+<p>Sample test(s)<br>input<br>3<br>1 3 2<br>output<br>1 3 2<br>input<br>4<br>2 2 3 3<br>output<br>2 1 3 4<br>input<br>1<br>2<br>output<br>1<br>Note<br>In the first test the numeration is already a permutation, so there is no need to change anything.</p>
+<p>In the second test there are two pairs of equal numbers, in each pair you need to replace one number.</p>
+<p>In the third test you need to replace 2 by 1, as the numbering should start from one.</p>
+<h3 id="题解-1">题解</h3><p>给n个数，变其中最少的数，使得数列里的数为1~n。刚开始没有考虑大于n的情况，wa掉一发</p>
+<h2 id="<!-￼1->"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cmath&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstring&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;algorithm&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">struct</span> node</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> shu,pos;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node a,node b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.shu&lt;b.shu;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp1</span><span class="params">(node a,node b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.pos&lt;b.pos;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> x;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;x;</span><br><span class="line">         <span class="built_in">cout</span>&lt;&lt;<span class="string">'1'</span>&lt;&lt;endl;<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">   node num[n];</span><br><span class="line">   <span class="keyword">int</span> ind[<span class="number">100005</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="built_in">cin</span>&gt;&gt;num[i].shu;</span><br><span class="line">       <span class="keyword">if</span>(num[i].shu&gt;n)   num[i].shu=<span class="number">0</span>;</span><br><span class="line">       <span class="keyword">if</span>(ind[num[i].shu]==<span class="number">1</span>)   num[i].shu=<span class="number">0</span>;</span><br><span class="line">       ind[num[i].shu]=<span class="number">1</span>;</span><br><span class="line">       num[i].pos=i;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    sort(num,num+n,cmp);</span><br><span class="line"><span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="keyword">if</span>(ind[i]!=<span class="number">1</span>)  num[k++].shu=i;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">   sort(num,num+n,cmp1);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;num[i].shu&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/08/12/BestCoder-Round-13/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">BestCoder Round #13</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Codeforces-Round-315-Div-2" data-title="Codeforces Round #315 (Div. 2)" data-url="http://guoyuxiang.com/2015/08/12/Codeforces-Round-315-Div-2/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"mjolnir"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Mjolnir
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+	<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','bgPZswnFC5YQTKMKbSFN','2.0.0');
+</script>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-65578540-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div id="totop" style="position:fixed;bottom:45px;right:15px;cursor: pointer;">
+<a title="to-the-top"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+  </div>
+</body>
+</html>
