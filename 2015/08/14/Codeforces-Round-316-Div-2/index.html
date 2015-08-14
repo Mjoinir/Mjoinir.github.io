@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Codeforces Round #316 (Div. 2) | Mjolnir</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="A. ElectionsThe country of Byalechinsk is running elections involving n candidates. The country consists of m cities. We know how many people in each city voted for each candidate.
+The electoral syste">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces Round #316 (Div. 2)">
+<meta property="og:url" content="http://guoyuxiang.com/2015/08/14/Codeforces-Round-316-Div-2/index.html">
+<meta property="og:site_name" content="Mjolnir">
+<meta property="og:description" content="A. ElectionsThe country of Byalechinsk is running elections involving n candidates. The country consists of m cities. We know how many people in each city voted for each candidate.
+The electoral syste">
+<meta property="og:updated_time" content="2015-08-14T03:02:02.238Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Codeforces Round #316 (Div. 2)">
+<meta name="twitter:description" content="A. ElectionsThe country of Byalechinsk is running elections involving n candidates. The country consists of m cities. We know how many people in each city voted for each candidate.
+The electoral syste">
+  
+    <link rel="alternative" href="/atom.xml" title="Mjolnir" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkl3j.com1.z0.glb.clouddn.com/favicon-20150727113535562.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?99aed96d60fcd4cdd709e9a79e140255";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?99aed96d60fcd4cdd709e9a79e140255";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+<form class="search" method="get" accept-charset="utf-8">
+<label>Search</label>
+			<input type="text" id="chillax-search-input" class="st-search-input_my" maxlength="30" placeholder="我是翔仔花了一天捣鼓出来的搜索框" />
+		</form>
+	<header id="header" class="inner">
+	
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkl3j.com1.z0.glb.clouddn.com/c837b944c7dc012aa39b21e5fdc9d547%20(1).jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Mjolnir</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">even if you get killed,just walk it off!</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/题解">题解</a></li>
+				        
+							<li><a href="/categories/日志">日志</a></li>
+				        
+							<li><a href="/about">更新记录</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="rss" target="_blank" href="http://blog.csdn.net/mjoinir" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/guo-yi-60" title="zhihu">zhihu</a>
+					        
+								<a class="douban" target="_blank" href="http://qianmo.com/lovewy/" title="douban">douban</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/imgyx" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/BestCoder/" style="font-size: 12.5px;">BestCoder</a> <a href="/tags/Codeforces/" style="font-size: 10px;">Codeforces</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/bestcoder/" style="font-size: 17.5px;">bestcoder</a> <a href="/tags/codeforces/" style="font-size: 12.5px;">codeforces</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/swiftype/" style="font-size: 10px;">swiftype</a> <a href="/tags/多校/" style="font-size: 15px;">多校</a> <a href="/tags/模板/" style="font-size: 10px;">模板</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/难题/" style="font-size: 10px;">难题</a> <a href="/tags/题解/" style="font-size: 20px;">题解</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://xuanwo.org/">xuanwo</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://ooooooooe.com/">大帝</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://fanzheng.org/">fz</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.altair21.com/">altair21</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://qianmo.com/lovewy/">我的阡陌</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://beidi.cugbteam.org/">北地资源</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.acfun.tv/">Acfun</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://weibo.com/u/5073535420?from=feed&loc=nickname">vy</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://litten.github.io/">litten</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://oeis.org">oeis</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://agar.io">Agar</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">本萌妹儿最近在奋斗中</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Mjolnir</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkl3j.com1.z0.glb.clouddn.com/c837b944c7dc012aa39b21e5fdc9d547%20(1).jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Mjolnir</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">even if you get killed,just walk it off!</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/题解">题解</a></li>
+		        
+					<li><a href="/categories/日志">日志</a></li>
+		        
+					<li><a href="/about">更新记录</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="rss" target="_blank" href="http://blog.csdn.net/mjoinir" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/guo-yi-60" title="zhihu">zhihu</a>
+			        
+						<a class="douban" target="_blank" href="http://qianmo.com/lovewy/" title="douban">douban</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/imgyx" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Codeforces-Round-316-Div-2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/14/Codeforces-Round-316-Div-2/" class="article-date">
+  	<time datetime="2015-08-14T02:22:55.000Z" itemprop="datePublished">2015-08-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Codeforces Round #316 (Div. 2)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codeforces/">codeforces</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/题解/">题解</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/codeforces/">codeforces</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="A-_Elections"><a href="http://codeforces.com/contest/570/problem/A" target="_blank" rel="external">A. Elections</a></h2><p>The country of Byalechinsk is running elections involving n candidates. The country consists of m cities. We know how many people in each city voted for each candidate.</p>
+<p>The electoral system in the country is pretty unusual. At the first stage of elections the votes are counted for each city: it is assumed that in each city won the candidate who got the highest number of votes in this city, and if several candidates got the maximum number of votes, then the winner is the one with a smaller index.</p>
+<p>At the second stage of elections the winner is determined by the same principle over the cities: the winner of the elections is the candidate who won in the maximum number of cities, and among those who got the maximum number of cities the winner is the one with a smaller index.</p>
+<p>Determine who will win the elections.<br><a id="more"></a><br>Input<br>The first line of the input contains two integers n, m (1 ≤ n, m ≤ 100) — the number of candidates and of cities, respectively.</p>
+<p>Each of the next m lines contains n non-negative integers, the j-th number in the i-th line aij (1 ≤ j ≤ n, 1 ≤ i ≤ m, 0 ≤ aij ≤ 109) denotes the number of votes for candidate j in city i.</p>
+<p>It is guaranteed that the total number of people in all the cities does not exceed 109.</p>
+<p>Output<br>Print a single number — the index of the candidate who won the elections. The candidates are indexed starting from one.</p>
+<p>Sample test(s)<br>input<br>3 3<br>1 2 3<br>2 3 1<br>1 2 1<br>output<br>2<br>input<br>3 4<br>10 10 3<br>5 1 6<br>2 2 2<br>1 5 7<br>output<br>1<br>Note<br>Note to the first sample test. At the first stage city 1 chosen candidate 3, city 2 chosen candidate 2, city 3 chosen candidate 2. The winner is candidate 2, he gained 2 votes.</p>
+<p>Note to the second sample test. At the first stage in city 1 candidates 1 and 2 got the same maximum number of votes, but candidate 1 has a smaller index, so the city chose candidate 1. City 2 chosen candidate 3. City 3 chosen candidate 1, due to the fact that everyone has the same number of votes, and 1 has the smallest index. City 4 chosen the candidate 3. On the second stage the same number of cities chose candidates 1 and 3. The winner is candidate 1, the one with the smaller index.</p>
+<h3 id="题解">题解</h3><p>每个城市选择一个候选人，最后看候选人的城市数，结构体排个序结果储存在数组里，max值初始化为-1就好。</p>
+<h2 id="<!-￼0->"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstring&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;algorithm&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">struct</span> node</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> v,pos;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node a,node b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a.v==b.v)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> a.pos&lt;b.pos;</span><br><span class="line">    <span class="keyword">return</span> a.v&gt;b.v;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> n,m,ans;</span><br><span class="line">   <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">   <span class="keyword">int</span> vis[n];</span><br><span class="line">   <span class="keyword">int</span> maxn=-<span class="number">1</span>;</span><br><span class="line">   <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">   <span class="keyword">while</span>(m--)</span><br><span class="line">   &#123;</span><br><span class="line">       node num[n];</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;num[i].v;</span><br><span class="line">            num[i].pos=i;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(num,num+n,cmp);</span><br><span class="line">        vis[num[<span class="number">0</span>].pos]++;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(vis[i]&gt;maxn)</span><br><span class="line">           &#123;</span><br><span class="line">               maxn=vis[i];</span><br><span class="line">        ans=i;</span><br><span class="line">           &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   <span class="built_in">cout</span>&lt;&lt;ans+<span class="number">1</span>&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2><h2 id="B-_Simple_Game"><a href="http://codeforces.com/contest/570/problem/B" target="_blank" rel="external">B. Simple Game</a></h2><p>One day Misha and Andrew were playing a very simple game. First, each player chooses an integer in the range from 1 to n. Let’s assume that Misha chose number m, and Andrew chose number a.</p>
+<p>Then, by using a random generator they choose a random integer c in the range between 1 and n (any integer from 1 to n is chosen with the same probability), after which the winner is the player, whose number was closer to c. The boys agreed that if m and a are located on the same distance from c, Misha wins.</p>
+<p>Andrew wants to win very much, so he asks you to help him. You know the number selected by Misha, and number n. You need to determine which value of a Andrew must choose, so that the probability of his victory is the highest possible.</p>
+<p>More formally, you need to find such integer a (1 ≤ a ≤ n), that the probability that  is maximal, where c is the equiprobably chosen integer from 1 to n (inclusive).</p>
+<p>Input<br>The first line contains two integers n and m (1 ≤ m ≤ n ≤ 109) — the range of numbers in the game, and the number selected by Misha respectively.</p>
+<p>Output<br>Print a single number — such value a, that probability that Andrew wins is the highest. If there are multiple such values, print the minimum of them.</p>
+<p>Sample test(s)<br>input<br>3 1<br>output<br>2<br>input<br>4 3<br>output<br>2<br>Note<br>In the first sample test: Andrew wins if c is equal to 2 or 3. The probability that Andrew wins is 2 / 3. If Andrew chooses a = 3, the probability of winning will be 1 / 3. If a = 1, the probability of winning is 0.</p>
+<p>In the second sample test: Andrew wins if c is equal to 1 and 2. The probability that Andrew wins is 1 / 2. For other choices of a the probability of winning is less.</p>
+<h3 id="题解-1">题解</h3><p>简单题，就是hack点太多，1，1；5，3；</p>
+<h2 id="<!-￼1->"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstring&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;algorithm&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m,n;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>) <span class="built_in">cout</span>&lt;&lt;<span class="string">"1"</span>&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">else</span> &#123;<span class="keyword">if</span>(m-<span class="number">1</span>&gt;=n-m)</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;m-<span class="number">1</span>&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;m+<span class="number">1</span>&lt;&lt;endl;&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2><h2 id="C-_Replacement"><a href="http://codeforces.com/contest/570/problem/C" target="_blank" rel="external">C. Replacement</a></h2><p>Daniel has a string s, consisting of lowercase English letters and period signs (characters ‘.’). Let’s define the operation of replacement as the following sequence of steps: find a substring “..” (two consecutive periods) in string s, of all occurrences of the substring let’s choose the first one, and replace this substring with string “.”. In other words, during the replacement operation, the first two consecutive periods are replaced by one. If string s contains no two consecutive periods, then nothing happens.</p>
+<p>Let’s define f(s) as the minimum number of operations of replacement to perform, so that the string does not have any two consecutive periods left.</p>
+<p>You need to process m queries, the i-th results in that the character at position xi (1 ≤ xi ≤ n) of string s is assigned value ci. After each operation you have to calculate and output the value of f(s).</p>
+<p>Help Daniel to process all queries.</p>
+<p>Input<br>The first line contains two integers n and m (1 ≤ n, m ≤ 300 000) the length of the string and the number of queries.</p>
+<p>The second line contains string s, consisting of n lowercase English letters and period signs.</p>
+<p>The following m lines contain the descriptions of queries. The i-th line contains integer xi and ci (1 ≤ xi ≤ n, ci — a lowercas English letter or a period sign), describing the query of assigning symbol ci to position xi.</p>
+<p>Output<br>Print m numbers, one per line, the i-th of these numbers must be equal to the value of f(s) after performing the i-th assignment.</p>
+<p>Sample test(s)<br>input<br>10 3<br>.b..bz….<br>1 h<br>3 c<br>9 f<br>output<br>4<br>3<br>1<br>input<br>4 4<br>.cc.<br>2 .<br>3 .<br>2 a<br>1 a<br>output<br>1<br>3<br>1<br>1<br>Note<br>Note to the first sample test (replaced periods are enclosed in square brackets).</p>
+<p>The original string is “.b..bz….”.</p>
+<p>after the first query f(hb..bz….) = 4    (“hb[..]bz….”  →  “hb.bz[..]..”  →  “hb.bz[..].”  →  “hb.bz[..]”  →  “hb.bz.”)<br>after the second query f(hbс.bz….) = 3    (“hbс.bz[..]..”  →  “hbс.bz[..].”  →  “hbс.bz[..]”  →  “hbс.bz.”)<br>after the third query f(hbс.bz..f.) = 1    (“hbс.bz[..]f.”  →  “hbс.bz.f.”)<br>Note to the second sample test.</p>
+<p>The original string is “.cc.”.</p>
+<p>after the first query: f(..c.) = 1    (“[..]c.”  →  “.c.”)<br>after the second query: f(….) = 3    (“[..]..”  →  “[..].”  →  “[..]”  →  “.”)<br>after the third query: f(.a..) = 1    (“.a[..]”  →  “.a.”)<br>after the fourth query: f(aa..) = 1    (“aa[..]”  →  “aa.”)</p>
+<h3 id="题解-2">题解</h3><p>开始的时候妄图搜多遍，结果T了。其实只要搜第一遍，后面的是要更行就好。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstring&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;algorithm&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;cstdio&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">    <span class="keyword">int</span> ind;</span><br><span class="line">    <span class="keyword">char</span> c;</span><br><span class="line">    m--;</span><br><span class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">      <span class="built_in">cin</span>&gt;&gt;ind&gt;&gt;c;</span><br><span class="line">      s[ind-<span class="number">1</span>]=c;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.size()-<span class="number">1</span>;i++)</span><br><span class="line">        <span class="keyword">if</span>(s[i]==<span class="string">'.'</span>&amp;&amp;s[i+<span class="number">1</span>]==<span class="string">'.'</span>)</span><br><span class="line">        ans++;</span><br><span class="line">      <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">      <span class="keyword">while</span>(m--)</span><br><span class="line">      &#123;</span><br><span class="line">          <span class="built_in">cin</span>&gt;&gt;ind&gt;&gt;c;</span><br><span class="line"></span><br><span class="line">          <span class="keyword">if</span>(c==<span class="string">'.'</span>&amp;&amp;(s[ind-<span class="number">1</span>]!=<span class="string">'.'</span>)&amp;&amp;s[ind-<span class="number">2</span>]==<span class="string">'.'</span>&amp;&amp;s[ind]==<span class="string">'.'</span>)</span><br><span class="line">            ans+=<span class="number">2</span>;</span><br><span class="line">          <span class="keyword">else</span> <span class="keyword">if</span>((c==<span class="string">'.'</span>&amp;&amp;(s[ind-<span class="number">1</span>]!=<span class="string">'.'</span>)&amp;&amp;s[ind-<span class="number">2</span>]==<span class="string">'.'</span>&amp;&amp;(s[ind]!=<span class="string">'.'</span>))||(c==<span class="string">'.'</span>&amp;&amp;(s[ind-<span class="number">1</span>]!=<span class="string">'.'</span>)&amp;&amp;s[ind]==<span class="string">'.'</span>&amp;&amp;(s[ind-<span class="number">2</span>]!=<span class="string">'.'</span>)))</span><br><span class="line">            ans++;</span><br><span class="line">           <span class="keyword">else</span> <span class="keyword">if</span>((c!=<span class="string">'.'</span>)&amp;&amp;(s[ind-<span class="number">1</span>]==<span class="string">'.'</span>)&amp;&amp;s[ind-<span class="number">2</span>]==<span class="string">'.'</span>&amp;&amp;s[ind]==<span class="string">'.'</span>)</span><br><span class="line">            ans-=<span class="number">2</span>;</span><br><span class="line">          <span class="keyword">else</span> <span class="keyword">if</span>(((c!=<span class="string">'.'</span>)&amp;&amp;(s[ind-<span class="number">1</span>]==<span class="string">'.'</span>)&amp;&amp;s[ind-<span class="number">2</span>]==<span class="string">'.'</span>&amp;&amp;(s[ind]!=<span class="string">'.'</span>))||((c!=<span class="string">'.'</span>)&amp;&amp;(s[ind-<span class="number">1</span>]==<span class="string">'.'</span>)&amp;&amp;s[ind]==<span class="string">'.'</span>&amp;&amp;(s[ind-<span class="number">2</span>]!=<span class="string">'.'</span>)))</span><br><span class="line">            ans--;</span><br><span class="line">            s[ind-<span class="number">1</span>]=c;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">-------</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/08/12/BestCoder-Round-14/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">BestCoder Round #14</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Codeforces-Round-316-Div-2" data-title="Codeforces Round #316 (Div. 2)" data-url="http://guoyuxiang.com/2015/08/14/Codeforces-Round-316-Div-2/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"mjolnir"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Mjolnir
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+	<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','bgPZswnFC5YQTKMKbSFN','2.0.0');
+</script>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-65578540-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div id="totop" style="position:fixed;bottom:45px;right:15px;cursor: pointer;">
+<a title="to-the-top"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+
+
+  </div>
+</body>
+</html>
